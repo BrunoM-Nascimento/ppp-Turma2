@@ -13,7 +13,7 @@ describe('Criação de Tarefas', () => {
                     'title': 'string',
                     'description': 'string',
                     'deadline': 'string',
-                    'responsibleId': 0
+                    'responsibleId': 2
                 });
             
             console.log(resposta.status);
@@ -29,7 +29,7 @@ describe('Criação de Tarefas', () => {
             .get('/users')
             .set('Content-Type', 'application/json');
 
-        expect(res.status).to.equal(401); // ou 403 dependendo da sua API
+        expect(res.status).to.equal(401); 
         });
 
         it('Deve retornar 403 se enviar token de usuário comum', async () => {

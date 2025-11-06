@@ -10,7 +10,7 @@ describe('Exclusão de tarefa - DELETE /tasks/{id}', () => {
     const userToken = 'TOKEN_DE_USUARIO_COMUM';
 
     // ID da tarefa que você quer editar
-    const taskId = 2;
+    const taskId = 1;
 
     // Status da tarefa: "não realizado", "em andamento", "concluída".
     it('Deve retornar 204 e excluir a tarefa', async () => {

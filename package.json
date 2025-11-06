@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha .test/**/*.test.js --timeout 200000"
+    "test": "mocha .test/**/*.test.js --timeout 200000 --report mochawesome"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "jsonwebtoken": "^9.0.2",
     "supertest": "^7.1.4",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.4"
   }
 }

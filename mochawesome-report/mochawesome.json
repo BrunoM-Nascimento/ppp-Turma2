@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-06T00:29:00.978Z",
+    "end": "2025-11-06T00:29:01.219Z",
+    "duration": 241,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f6e4c2e-0c40-440e-ac1a-af475b4621e9",
+      "title": "",
+      "fullFile": "C:\\Projetos\\ppp-Turma2\\test\\relatorioProgr.test.js",
+      "file": "\\test\\relatorioProgr.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35d651a7-b8de-496d-ab0b-46a23f5742f1",
+          "title": "Relatório de Progresso - GET /tasks/report",
+          "fullFile": "C:\\Projetos\\ppp-Turma2\\test\\relatorioProgr.test.js",
+          "file": "\\test\\relatorioProgr.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve retornar 200 e o relatório de progresso",
+              "fullTitle": "Relatório de Progresso - GET /tasks/report Deve retornar 200 e o relatório de progresso",
+              "timedOut": false,
+              "duration": 194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resposta = await request('http://localhost:3000')\n    .get(`/tasks/report`)\n    .set('Authorization', `Bearer ${adminToken}`)\n    .set('Content-Type', 'application/json')\nconsole.log(resposta.body);\nconsole.log('Status:', resposta.status);\nexpect(resposta.status).to.equal(200);",
+              "err": {},
+              "uuid": "f6567a69-56bb-4d65-bc81-6da921529637",
+              "parentUUID": "35d651a7-b8de-496d-ab0b-46a23f5742f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve retornar 401 se não enviar token",
+              "fullTitle": "Relatório de Progresso - GET /tasks/report Deve retornar 401 se não enviar token",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resposta = await request('http://localhost:3000')\n    .get(`/tasks/report`)\n    .set('Content-Type', 'application/json')\nexpect(resposta.status).to.equal(401);",
+              "err": {},
+              "uuid": "f345d15e-3f8a-489e-9505-47db590d48e4",
+              "parentUUID": "35d651a7-b8de-496d-ab0b-46a23f5742f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve retornar 403 acesso restrito a administradores",
+              "fullTitle": "Relatório de Progresso - GET /tasks/report Deve retornar 403 acesso restrito a administradores",
+              "timedOut": false,
+              "duration": 14,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resposta = await request('http://localhost:3000')\n    .get(`/tasks/report`)\n    .set('Authorization', `Bearer ${userToken}`)\n    .set('Content-Type', 'application/json')\nexpect(resposta.status).to.equal(403);",
+              "err": {},
+              "uuid": "3b459f2c-096a-4036-b015-212450dfcffb",
+              "parentUUID": "35d651a7-b8de-496d-ab0b-46a23f5742f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6567a69-56bb-4d65-bc81-6da921529637",
+            "f345d15e-3f8a-489e-9505-47db590d48e4",
+            "3b459f2c-096a-4036-b015-212450dfcffb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 214,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
