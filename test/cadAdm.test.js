@@ -13,9 +13,6 @@ describe('Registro', () => {
                     'password': '123456'
                 });
 
-            console.log(resposta.status);
-            console.log(resposta.body);
-
             expect(resposta.status).to.equal(201);
             expect(resposta.body);
         });
@@ -32,7 +29,6 @@ describe('Registro', () => {
                 .set('Content-Type', 'application/json')
                 .send(userData);
 
-            console.log(resposta.status);
             expect(resposta.status).to.equal(400);
         });
     });

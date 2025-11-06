@@ -10,9 +10,6 @@ describe('Lista de Tarefas', () => {
                 .set('Authorization', `Bearer ${tokenAdmin}`)
                 .set('Content-Type', 'application/json');
 
-            console.log('Status:', resposta.statusCode);
-            console.log(resposta.body);
-
             expect(resposta.status).to.equal(200);
             expect(resposta.body).to.be.an('array');
         });
