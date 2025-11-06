@@ -16,9 +16,6 @@ describe('Relatório de Progresso - GET /tasks/report', () => {
             .set('Authorization', `Bearer ${adminToken}`)
             .set('Content-Type', 'application/json')
 
-        console.log(resposta.body);
-        console.log('Status:', resposta.status);
-
         expect(resposta.status).to.equal(200);
     });
 

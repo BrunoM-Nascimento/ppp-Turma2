@@ -20,9 +20,6 @@ describe('Atualização de status da tarefa - PATCH /tasks/{id}/status', () => {
             .set('Content-Type', 'application/json')
             .send({ status: 'concluída' });
 
-        console.log('Status:', resposta.status);
-        console.log('Body:', resposta.body);
-
         expect(resposta.status).to.equal(200);
         expect(resposta.body).to.have.property('status');
     });

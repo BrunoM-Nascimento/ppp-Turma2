@@ -11,9 +11,6 @@ describe('Login', () => {
                     'email': 'bruno@bruno.com',
                     'password': '123456'
                 });
-            
-            console.log(resposta.status);
-            console.log(resposta.body);
 
             expect(resposta.status).to.equal(200);
             expect(resposta.body.token).to.be.a('string');
@@ -29,8 +26,7 @@ describe('Login', () => {
                 .post('/login')
                 .set('Content-Type', 'application/json')
                 .send(userData);
-
-            console.log(resposta.status);
+                
             expect(resposta.status).to.equal(401);
         });
     });

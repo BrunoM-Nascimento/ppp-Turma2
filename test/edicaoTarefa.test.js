@@ -26,9 +26,6 @@ describe('Edição de tarefa - PUT /tasks/{id}', () => {
                     'status': 'string'
                 });
 
-        console.log('Status:', resposta.status);
-        console.log('Body:', resposta.body);
-
         expect(resposta.status).to.equal(200);
         expect(resposta.body).to.have.property('status');
     });

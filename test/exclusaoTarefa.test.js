@@ -19,8 +19,6 @@ describe('Exclusão de tarefa - DELETE /tasks/{id}', () => {
             .set('Authorization', `Bearer ${adminToken}`)
             .set('Content-Type', 'application/json')
 
-        console.log('Status:', resposta.status);
-
         expect(resposta.status).to.equal(204);
     });
 

@@ -15,9 +15,6 @@ describe('Criação de Tarefas', () => {
                     'deadline': 'string',
                     'responsibleId': 2
                 });
-            
-            console.log(resposta.status);
-            console.log(resposta.body);
 
             expect(resposta.status).to.equal(201);
             expect(resposta.body).to.have.property('id');
